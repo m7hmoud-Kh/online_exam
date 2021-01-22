@@ -1,0 +1,387 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.wave {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.container2 {
+	width: 118vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	grid-gap: 9rem;
+	padding: 1px 2rem;
+}
+
+.img {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.login-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.img img {
+	width: 500px;
+}
+
+.loginstudent {
+	width: 360px;
+}
+
+.login-content img {
+	height: 100px;
+}
+
+.login-content h2 {
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 1.9rem;
+}
+
+.login-content .input-div {
+	position: relative;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin: 25px 0;
+	padding: 5px 0;
+	border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one {
+	margin-top: 0;
+}
+
+.i {
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i i {
+	transition: .3s;
+}
+
+.input-div>div {
+	position: relative;
+	height: 45px;
+}
+
+.input-div>div>h5 {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.input-div:before,
+.input-div:after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #38d39f;
+	transition: .4s;
+}
+
+.input-div:before {
+	right: 50%;
+}
+
+.input-div:after {
+	left: 50%;
+}
+
+.input-div.focus:before,
+.input-div.focus:after {
+	width: 50%;
+}
+
+.input-div.focus>div>h5 {
+	top: -5px;
+	font-size: 15px;
+}
+
+.input-div.focus>.i>i {
+	color: #38d39f;
+}
+
+.input-div>div>input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass {
+	margin-bottom: 4px;
+}
+
+.login {
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+
+.login:hover {
+	color: #38d39f;
+}
+
+/**********start the exam***************/
+.navstudent {
+	background-color: #38d19e;
+	padding: 10px;
+	color: #fff;
+}
+
+.exam {
+	color: #fff !important;
+	font-weight: bold;
+	transition: all 0.45s ease-in-out;
+}
+
+.exam:hover {
+	color: rgb(228, 56, 107) !important;
+	text-decoration: none;
+}
+
+.allcou {
+	text-align: center;
+	margin-top: 5%;
+}
+
+table tr:first-of-type td {
+	background-color: #333;
+	color: #fff;
+
+}
+
+.panel .panelhead {
+	background-color: #38d19e;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.panelbody {
+	background-color: #f4f4f4;
+	padding: 20px;
+}
+
+#result {
+	margin-top: 2%;
+	text-transform: capitalize;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.examshow {
+	color: #000;
+}
+
+.examshow:hover {
+	color: #000;
+}
+
+.infouser {
+	color: #16b681;
+	font-weight: bold;
+}
+
+.panel .panelbody ul li {
+	padding: 5px;
+}
+
+.panel .panelbody ul li:nth-of-type(odd) {
+	background-color: #fff
+}
+
+.questions {
+	text-align: left;
+	padding: 20px;
+	font-size: 22px !important;
+}
+
+.options {
+	text-align: left;
+	margin-bottom: 5%;
+	text-transform: capitalize;
+}
+
+.result_ex {
+	text-transform: capitalize;
+}
+
+.table_mark {
+	text-align: left;
+}
+
+.finresult {
+	color: #16b681;
+	font-weight: bold;
+}
+
+.userdet:nth-child(odd) {
+	background-color: #5c3030;
+	padding: 5px;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.optionst {
+	margin-bottom: 2%;
+	padding: 10px;
+}
+
+.dropbtn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	min-width: 200px;
+
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	transition: all 0.45s ease-in-out;
+	transform: translateX(-3px);
+}
+
+.dropdown-content a:hover {
+	color: #16b681;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+
+
+.navstudent .dropmenu,
+.navstudent .dropemail {
+	margin-top: 1%;
+	font-size: 33px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.dropmenu .not,
+.dropemail .email {
+	font-size: 13px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #f00;
+	border-radius: 50%;
+	left: 49%;
+	top: 0;
+}
+
+.dropemail .email {
+	left: 56%;
+	top: 0;
+}
+
+.dropmenu .dropmenu_con,
+.dropemail .dropmenu_con {
+	position: absolute;
+	display: none;
+	min-width: 400px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	background-color: #f1f1f1;
+}
+
+.dropmenu_con a {
+	color: #000;
+	padding: 18px;
+	text-decoration: none;
+	display: block;
+	transition: all 0.45s ease-in-out;
+	text-align: left;
+	font-size: 18px;
+}
+
+.dropmenu_con a:hover {
+	color: #fff;
+	background-color: #16b681;
+}
+
+.dropmenu:hover .dropmenu_con,
+.dropemail:hover .dropmenu_con{
+	display: block;
+}
+
+.dropmenu .panel .panel-head,
+.dropemail .panel .panel-head {
+	background-color: #0061f2;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+}
+
