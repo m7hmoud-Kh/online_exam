@@ -23,7 +23,7 @@ if (isset($_SESSION['prof_id']) && is_numeric($_SESSION['prof_id'])) {
                         <?php
                         $x =1;
                         foreach ($alluser as $user) {
-                            $stmt = $con->prepare("SELECT * FROM student WHERE stu_id  = ?");
+                            $stmt = $con->prepare("CALL Display_all_student_of_specific_prof(?)");
                             $stmt->execute(array($user["stu_id"]));
                             $userinfo = $stmt->fetch();
                         ?>

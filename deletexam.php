@@ -16,10 +16,10 @@ if (isset($_SESSION['prof_id']) && is_numeric($_SESSION['prof_id'])) {
         $exam = $stmt->fetch();
         $count = $stmt->rowCount();
         if ($count > 0) {
-            $stmt2 = $con->prepare("DELETE FROM quest_exam WHERE online_exam_id = ?");
-            $stmt2->execute(array($examid));
-            $stmt = $con->prepare("DELETE FROM online_exam WHERE exam_id = ?");
-            $stmt->execute(array($examid));
+            $stmt2 = $con->prepare("CALL Remove(?,?,?)");
+            $stmt2->execute(array('quest_exam','online_exam_id',$examid));
+            $stmt = $con->prepare("CALL Remove(?,?,?)");
+            $stmt->execute(array('online_exam','exam_id',$examid));
             $count2 = $stmt->rowCount();
             if ($count2 > 0) {
 ?>
