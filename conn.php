@@ -1,5 +1,5 @@
 <?php 
-$host = "mysql:host=localhost;dbname=exam";
+$host = "mysql:host=localhost;dbname=online_exam";
 $user = "root";
 $password = "";
 
